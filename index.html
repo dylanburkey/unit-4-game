@@ -2,102 +2,51 @@
 <html lang="en-us" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fight Night</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="author" content="Dylan Burkey">
+  <meta charset="UTF-8">
+  <title>Mortal Kobat | FIGHT!</title>
+  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+
 </head>
 
 <body>
-    <div class="app">
-        <div class="app-container">
+  <header>
+      
+  </header>
+  <section id="main-game-section">
+    <div header id="characters-section">
+      
+    </section>
+    <div class="container col-lg-4" id="selected-character-section">
+      <div class="section-title container"></div>
+      <div id="selected-character"></div>
+    </div>
+     <div class="section-title container col-lg-4">Fight Section
+    	<div id="fight-section">
+      		<button class="btn" id="attack-button">Attack</button>
+      		<div class="jumbotron" id="gameMessage"></div>
+    	</div>   
+    </div>	
+    <div id="action">
+      <div class="character-section">
+        <div class="container section-title col-lg-3">
+        	<div id="defender"></div>
+        </div>	
+      </div>
+    </div>    
+    <div class="container" id="available-to-attack-section">
+      <div class="section-title"></div>
+    </div>
 
-            <div class="row" id="first">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4 cont" id="result">
-                </div>
-                <div class="col-md-4">
-                </div>
-            </div>
 
-            <div class="row" id="names">
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-2 cont" id="playerName"></div>
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-2 cont" id="enemyName"></div>
-                <div class="col-md-3">
-                </div>
-
-            </div>
-
-            <div class="row" id="second">
-                <div class="col-md-3">
-                </div>
-                <div hidden class="col-md-2 cont" id="playerCharArea">
-                    <!-- Empty and hidden until player character is selected -->
-                    <div class="health" id="playerHealth"></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="row" id="sub">
-                        <div class="col-md-3">
-                        </div>
-                        <div hidden class="col-md-6" id="attack">
-                            <button class="btn btn-default attack">Attack</button>
-                            <!-- Starts hidden -->
-                        </div>
-                        <div class="col-md-3">
-                        </div>
-                    </div>
-                </div>
-                <div hidden class="col-md-2 cont" id="enemyCharArea">
-                    <!-- Empty and hidden until enemy character is selected -->
-                    <div class="health" id="enemyHealth"></div>
-                </div>
-                <div class="col-md-3">
-                </div>
-            </div>
-
-            <div class="row" id="third">
-                <div class="col-md-5 cont">
-                    <div class="row" id="playerCharSelection">
-                        <div class="col-md-3 cont">
-                            <img src="/assets/media/images/db.jpeg" data-img-url="/assets/media/images/db.jpeg" data-img-name="Dylan Burkey" class="playerCharPick"
-                                data-obj="dylan">
-                        </div>
-                        <div class="col-md-3 cont">
-                            <img src="assets/images/raiden" class="playerCharPick" data-obj="raiden">
-                        </div>
-                        <div class="col-md-3 cont">
-                            <img src="assets/images/kano.png" class="playerCharPick" data-obj="kano">
-                        </div>
-                        <div class="col-md-3 cont">
-                            <img src="assets/images/sub-zero.png" class="playerCharPick" data-obj="sub-zero">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-2" id="newGame">
-                    <button class="btn btn-default newGame">New Game</button>
-                </div>
-                <div class="col-md-5 cont">
-                    <div class="row" id="enemyCharSelection">
-                        <div class="col-md-3 cont">
-                            <!-- empty box to keep formatting -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script src="assets/scritps/game.js"></script>
+<!--     <div class="jumbotron" id="gameMessage"></div>
+ -->
+  </div>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <!-- Latest compiled and minified JavaScript for bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Game logic -->
+  <script type="text/javascript" src="assets/scripts/game.js"></script>
 </body>
-
-
-</div>
-<!-- /.app-container-->
-</div>
 
 </html>
