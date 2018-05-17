@@ -2,50 +2,61 @@
 <html lang="en-us" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+  
   <title>Mortal Kobat | FIGHT!</title>
-  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 
+  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="fake_path">
 </head>
 
 <body>
-  <header>
+    <div class="app">
       
-  </header>
   <section id="main-game-section">
-    <div header id="characters-section">
+    <div id="characters-section">
+
       
     </section>
-    <div class="container col-lg-4" id="selected-character-section">
+    <div id="selected-character-section">
       <div class="section-title container"></div>
       <div id="selected-character"></div>
     </div>
-     <div class="section-title container col-lg-4">Fight Section
+     <section class="fight-section">
+         <header class="section-headers"></header>
+    
     	<div id="fight-section">
-      		<button class="btn" id="attack-button">Attack</button>
-      		<div class="jumbotron" id="gameMessage"></div>
+      		<button class="btn" id="attack-button">attack</button>
+      		<div class="island" id="gameMessage"></div>
     	</div>   
     </div>	
+</section>
+     <!-- /.fight-section-->
+
     <div id="action">
       <div class="character-section">
-        <div class="container section-title col-lg-3">
+        <div class="container section-title">
         	<div id="defender"></div>
         </div>	
       </div>
     </div>    
-    <div class="container" id="available-to-attack-section">
+    <!-- /#action -->
+
+
+    <div id="available-to-attack-section">
       <div class="section-title"></div>
     </div>
+    <!-- /.section-tile -->
 
-
-<!--     <div class="jumbotron" id="gameMessage"></div>
- -->
   </div>
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <!-- Latest compiled and minified JavaScript for bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <!-- Game logic -->
+</div>
+</div>
+</div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/scripts/game.js"></script>
 </body>
 

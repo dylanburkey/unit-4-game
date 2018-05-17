@@ -1,6 +1,69 @@
-* {
-    box-sizing: border-box;
+@mixin box-sizing($type: border-box) {
+    box-sizing: $type;
+}
 
+@mixin cf{
+    &::after {
+        clear: both;
+        display: block;
+        content: ' ';
+    }
+}
+$use-reset: true;
+
+@if $use-reset == TRUE {
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+}
+
+* {
+    @include box-sizing;
 }
 
 *::before,
@@ -11,76 +74,108 @@
 html {
     font-size: 100%;
     height: 100%;
-    
 }
 
 body {
-    background: url("../assets/media/images/game-stage.jpg") no-repeat;
+    background: url("../../assets/media/images/game-stage.jpg") no-repeat;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1em;
+    background-size: cover;
     line-height: 1.6;
     font-weight: 400;
+}
+
+.app {
+    max-width: 64rem;
+    width: 98%;
+    max-height: 100vh;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: auto;
+    color: #fff;
+    @include cf;
 
 }
 
-header {
-    font-size: 50px;
-    font-size: 3.125rem;
-    text-align: center;
-    padding: 20px;
+
+
+#main-game-section {
+    width: 100%;
+    margin: 3em 0;
+    padding: 10px;
+    @include cf;
+    
 }
 
-div[id="character-wrapper"] {
-    width: 75%;
-    margin: 0 auto;
+div[id="characters-section"] {
+   
 }
 
 div[id="gameMessage"] {
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
+    width: 20%;
+    padding: 1em;
+    @include cf;
+    
+    
 }
-div[id="choose-enemy-button"]{
+
+div[id="choose-enemy-button"] {
     visibility: hidden;
 }
 
-div[id="restart-button"]{
+div[id="restart-button"] {
     visibility: hidden;
 }
-
 
 div[id="turn-counter"] {
-    font-size: 150%;
+    font-size: 3rem;
 }
 
-
-
 .character {
-    width: 153px;
-    margin: 0px 40px 0px 40px;
-    cursor: pointer;
-    display: inline-block;
+    float: left;
+    width: 33.3%;
+    padding-left: 5px;
+    background: dimgray;
+    @include cf;
+    
+
+    
+
+  
+
+   
+}
+
+div[id="characters-section"]{
+   width: 100%;
+   float: left;
+   
 }
 
 .character img {
-    border: 0 none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
+  width: 150px;
+  height: 150px;
+  
+ 
+
+    &:hover {
+        transition: ease-out 10s;
+    }
+
 }
 
 .character-name {
     text-align: center;
     text-transform: capitalize;
     line-height: 1.6;
-    font-size: 40px;
+    
 }
 
 .character-health {
     text-align: center;
 }
-
-
 
 .attack {
     text-align: center;
@@ -95,7 +190,10 @@ div[id="attack-button"] {
 }
 
 .btn {
-    background: burlywood;
+    display: block;
+    display: inline;
+    text-align: center;
+    background: #eee;
     color: firebrick;
     padding: 1em;
     font-size: 1.2rem;
@@ -103,11 +201,8 @@ div[id="attack-button"] {
 }
 
 .enemy {
-    width: 153px;
-    margin: 10px;
-    cursor: pointer;
+    @include cf;
     display: inline-block;
-    background-color: slateblue;
 }
 
 div[id="attacker"] {
@@ -116,6 +211,8 @@ div[id="attacker"] {
 
 .target-enemy {
     background: #333;
+    float: right;
+    width: 33.3%;
     color: #eee;
 }
 
@@ -128,13 +225,14 @@ div[id="attacker"] {
  */
 
 div[id="available-to-attack-section"] {
+    width: 50%;
     float: right;
+    @include cf;
+
+ 
 }
 
-
-
 div[id="available-to-attack-section"] img {
-    height:  3em;
 }
 
 /*============================================================================*\
@@ -146,6 +244,7 @@ div[id="available-to-attack-section"] img {
 
 
 \*============================================================================*/
+
 div[id="defender-name"] {
     text-align: center;
 }
@@ -159,3 +258,26 @@ div[id="defender-health"] {
     text-align: center;
 }
 
+/**
+ *  .island styles
+ *
+ *  @date: Tuesday May 15, 2018 - 9:08 PM
+ *  @author: Dyan Burkey
+ *
+ */
+
+ $bg-red: #be1e2e;
+ $base-white: #fff;
+
+.island {
+    max-width: 50%;
+    display: flex;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 1.5;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    background: $bg-red;
+    color: $base-white;
+}
