@@ -108,15 +108,14 @@ body {
 }
 
 div[id="characters-section"] {
-   
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 div[id="gameMessage"] {
     text-align: center;
-    font-size: 15px;
-    width: 20%;
-    padding: 1em;
-    @include cf;
+    font-size: 10px;
     
     
 }
@@ -134,11 +133,10 @@ div[id="turn-counter"] {
 }
 
 .character {
-    float: left;
-    width: 33.3%;
-    padding-left: 5px;
-    background: dimgray;
-    @include cf;
+    width: 153px;
+    margin: 0px 40px 0px 40px;
+    cursor: pointer;
+    display: inline-block;
     
 
     
@@ -155,9 +153,10 @@ div[id="characters-section"]{
 }
 
 .character img {
-  width: 150px;
-  height: 150px;
-  
+    border: 0 none;
+    display: block;
+    margin: auto 0;
+    height: 200px;
  
 
     &:hover {
@@ -182,7 +181,7 @@ div[id="characters-section"]{
 }
 
 .action {
-    margin: 15px 0px;
+    margin: 0.9375em 0;
 }
 
 div[id="attack-button"] {
@@ -190,30 +189,30 @@ div[id="attack-button"] {
 }
 
 .btn {
-    display: block;
-    display: inline;
-    text-align: center;
-    background: #eee;
-    color: firebrick;
-    padding: 1em;
-    font-size: 1.2rem;
-    font-weight: 500;
+    background: #000;
+	color: #DBD2C6;
 }
 
 .enemy {
-    @include cf;
-    display: inline-block;
+    width: 153px;
+	margin: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: red;
+ 
 }
 
 div[id="attacker"] {
     padding: 5px;
+    text-align: center;
 }
 
 .target-enemy {
-    background: #333;
-    float: right;
-    width: 33.3%;
-    color: #eee;
+    background-color: black;
+  color: white;
 }
 
 /**
@@ -225,14 +224,16 @@ div[id="attacker"] {
  */
 
 div[id="available-to-attack-section"] {
-    width: 50%;
     float: right;
-    @include cf;
+    width: 25%;
+    color: #fff;
+    font-weight: 800;
 
  
 }
 
 div[id="available-to-attack-section"] img {
+    width: 150px;
 }
 
 /*============================================================================*\
@@ -250,8 +251,8 @@ div[id="defender-name"] {
 }
 
 div[id="defender-image"] {
-    padding: 0px 16px;
-    margin: 3px 0px;
+    padding: 0 0.735em;
+    margin: 0.1875em 0;
 }
 
 div[id="defender-health"] {
@@ -269,15 +270,6 @@ div[id="defender-health"] {
  $bg-red: #be1e2e;
  $base-white: #fff;
 
-.island {
-    max-width: 50%;
-    display: flex;
-    font-size: 22px;
-    font-size: 1.375rem;
-    line-height: 1.5;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    background: $bg-red;
-    color: $base-white;
-}
+
+
+ 

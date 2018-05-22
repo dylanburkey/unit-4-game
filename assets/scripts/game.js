@@ -58,7 +58,7 @@ $(function () {
       name: 'kittana',
       health: 175,
       attack: 30,
-      imageUrl: "assets/media/images/jonny-cage.png",
+      imageUrl: "assets/media/images/kitana.png",
       enemyAttackBack: 20
     }
   };
